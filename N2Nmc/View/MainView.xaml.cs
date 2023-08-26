@@ -1,4 +1,4 @@
-﻿using n2nmc.View.Pagey;
+using n2nmc.View.Pagey;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +32,8 @@ namespace n2nmc.View
     public partial class MainView : Window
     {
         //全局n2n服务器ip
-        public static string severip = "14.29.239.175:7777";
-        public static string severapi = "14.29.239.175:58888";
+        public static string severip = "";//N2N服务器地址
+        public static string severapi = "";//api地址
         //用于page2窗口控件状态
         public static int pass;
         public static int guanbipage2;

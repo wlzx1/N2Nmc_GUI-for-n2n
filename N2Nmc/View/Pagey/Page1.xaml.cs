@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -38,11 +38,15 @@ namespace n2nmc.View.Pagey
         List<Card> cardsall = new List<Card>();
 
         // 定义数据库连接参数
-        public static string serverall = "14.29.239.175"; //服务器地址
-        public static int portall = 3306; //端口
-        public static string usernameall = "root"; //用户名
-        public static string passwordall = "xjb123456"; //密码
-        public static string databaseall = "n2n"; //数据库名
+        public static string serverall = ""; //mysql服务器地址
+        public static int portall = ; //mysql端口
+        public static string usernameall = ""; //mysql用户名
+        public static string passwordall = ""; //mysql密码
+        public static string databaseall = "n2n"; //mysql数据库名
+
+        //需要使用的mysql数据库文件：数据库n2n，表user，表头user
+
+
         // 创建连接字符串
         public static string connectionStringall = $"server={serverall};port={portall};user={usernameall};password={passwordall};database={databaseall};";
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -43,16 +43,7 @@ namespace n2nmc.View.Pagey
             ILog log = LogManager.GetLogger("Info");
             try
             {
-                // 执行 MySQL 操作
-                // 定义连接参数
-                //string server = "localhost";
-                //int port = 3308; // 替换为实际的端口号
-                //string username = "root";
-                //string password = "123456";
-                //string database = "wlzx";
-
-                // 创建连接字符串
-                //string connectionString = $"server={server};port={port};user={username};password={password};database={database};";
+                
 
 
                 string insertQuery = "INSERT INTO user (user) VALUES (@user)"; //INSERT INTO user (user)<表名> VALUES (@user)
