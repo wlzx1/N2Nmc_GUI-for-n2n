@@ -11,10 +11,12 @@ N2Nmc是N2N的一个图形化界面，可以用于各种局域网联机游戏
 #### 安装教程
 
 1.  设置 文件View/MainView.xaml.cs中的这两项
+
     public static string severip = "";//N2N服务器地址
     public static string severapi = "";//api地址
 
 2.  设置 文件View/Page/Page1.xaml.cs中的这四项
+
     public static string serverall = ""; //mysql服务器地址
     public static int portall = ; //mysql端口
     public static string usernameall = ""; //mysql用户名
