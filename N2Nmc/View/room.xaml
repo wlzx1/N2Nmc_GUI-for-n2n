@@ -1,0 +1,59 @@
+﻿<Window x:Class="N2Nmc.View.room"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:N2Nmc.View"
+        mc:Ignorable="d"
+        Title="room" Height="500" Width="815" WindowStartupLocation="CenterScreen" Icon="/img/logo13.ico" WindowStyle="None" AllowsTransparency="True" Background="Transparent" Loaded="Window_Loaded">
+    <Window.Effect>
+        <DropShadowEffect Color="Black" Direction="320" ShadowDepth="20" Opacity="0.5" />
+    </Window.Effect>
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10">
+
+        <Grid>
+            <Border Background="White" CornerRadius="10">
+                <Button Content="刷新" HorizontalAlignment="Left" Margin="329,449,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+            </Border>
+            <Border CornerRadius="10,10,0,0" Background="#035cac" Margin="0,0,0,453" MouseLeftButtonDown="Winmove_room">
+                <Grid x:Name="grid"  Height="40" VerticalAlignment="Top"  >
+                    <Button x:Name="guanbi"  Background="Transparent" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Width="30" Height="30" Click="Buttonguanbi_Click" >
+                        <Border>
+                            <Path Data="M1 0 20 20M1 20 20 0" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="zuixiaohua"  Background="Transparent" HorizontalAlignment="Right" Margin="0,5,50,0" VerticalAlignment="Top" Width="30" Height="30" Click="Buttonzuixiaohua_Click" >
+                        <Border>
+                            <Path Data="M2 10 H18" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </Button>
+                    <Label Content="房间列表" Background="Transparent"  HorizontalAlignment="Left" Margin="10,0,0,0"/>
+                </Grid>
+            </Border>
+            <Border Background="#cbcbcb" Margin="380,45,0,0" CornerRadius="0,0,10,0">
+                <Grid>
+                    <TextBox x:Name="messageTextBox" HorizontalAlignment="Left" Margin="19,413,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
+                    <Button Content="发送" HorizontalAlignment="Left" Margin="359,413,0,0" VerticalAlignment="Top" Width="60" Click="sendButton_Click"/>
+                    <Border Background="#f4f4f4" Margin="15,15,15,50" CornerRadius="10">
+                        <TextBlock x:Name="TextBlock_Chat" TextWrapping="Wrap" Margin="24,24,24,24"><Run Language="zh-cn" Text="开发中：暂时不可用"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
+                    </Border>
+                </Grid>
+            </Border>
+            <hc:TransitioningContentControl Margin="0,45,353,0">
+                <DataGrid x:Name="DataGridroom" Margin="0,0,81,64" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="编号" Binding="{Binding StuIda}" Width="50"/>
+                        <DataGridTextColumn Header="名称" Binding="{Binding Community}"/>
+                        <DataGridTextColumn Header="IP"  Binding="{Binding Ip4Address}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </hc:TransitioningContentControl>
+            <TextBlock HorizontalAlignment="Left" Margin="10,442,0,0" TextWrapping="Wrap" Text="如果搜不到房主的房间，请使用IP+房主游戏端口的形式输入到服务器地址中" VerticalAlignment="Top" Height="52" Width="260"/>
+        </Grid>
+    </Border>
+
+
+</Window>

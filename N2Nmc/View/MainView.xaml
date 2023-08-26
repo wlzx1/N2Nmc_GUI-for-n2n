@@ -1,0 +1,130 @@
+﻿<Window x:Class="n2nmc.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:N2Nmc"
+        xmlns:hc="clr-namespace:HandyControl.Controls;assembly=HandyControl"
+        
+
+
+        mc:Ignorable="d"
+        Title="N2Nmc QQ群：856112671" Height="570" Width="920" WindowStartupLocation="CenterScreen" Icon="/img/logo13.ico" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <!--Icon="{StaticResource ApplicationIcon}"-->
+    <Border CornerRadius="10" Margin="0,0,10,10" >
+        <Border.Effect>
+            <DropShadowEffect Color="Black" Direction="300" Opacity="0.5" ShadowDepth="7" BlurRadius="5" />
+        </Border.Effect>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="114*"/>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--<Frame x:Name="Page1" Source="Pagey/Page1.xaml" />
+            <Frame x:Name="Page2" Source="Pagey/Page2.xaml" />
+            <Frame x:Name="Page3" Source="Pagey/Page3.xaml" />-->
+
+
+
+
+            <!--<Frame x:Name="Page1" Source="Pagey/Page1.xaml" />
+            <Frame x:Name="Page2" Source="Pagey/Page2.xaml" />
+            <Frame x:Name="Page3" Source="Pagey/Page3.xaml" />-->
+            <Border Background="#035cac" CornerRadius="10,10,0,0" Margin="0,0,0,520" MouseLeftButtonDown="WinMove_main" Grid.ColumnSpan="3">
+                <Grid x:Name="grid"  Height="40" VerticalAlignment="Top"  >
+                    <!--<Border MouseLeftButtonDown=""></Border>-->
+                    <Button x:Name="guanbi"  Background="Transparent" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Width="30" Height="30" Click="Buttonguanbi_Click" >
+                        <Border>
+                            <Path Data="M1 0 20 20M1 20 20 0" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="zuixiaohua"  Background="Transparent" HorizontalAlignment="Right" Margin="0,5,50,0" VerticalAlignment="Top" Width="30" Height="30" Click="Buttonzuixiaohua_Click" >
+                        <Border>
+                            <Path Data="M2 10 H18" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </Button>
+                </Grid>
+            </Border>
+
+
+
+
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" Grid.Column="2" Margin="275,0,0,0">
+                <StackPanel hc:Growl.GrowlParent="True" VerticalAlignment="Bottom" Margin="0,10,10,10"/>
+            </ScrollViewer>
+            <Border CornerRadius="0,0,10,10" Background="LightGray" Margin="0,40,0,0" Grid.ColumnSpan="3">
+                <!--<Frame x:Name="Page1" Source="Pagey/Page1.xaml" />
+                <Frame x:Name="Page2" Source="Pagey/Page2.xaml" />
+                <Frame x:Name="Page3" Source="Pagey/Page3.xaml" />-->
+                <Grid HorizontalAlignment="Left" Width="910">
+                    <Grid.ColumnDefinitions>
+                        <!-- 主内容列 -->
+
+
+
+
+                        <ColumnDefinition Width="Auto"/>
+                        <!-- 左侧边栏列 -->
+                        <ColumnDefinition Width="102*"/>
+                        <ColumnDefinition Width="73*"/>
+                        <ColumnDefinition Width="675*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- 左侧边栏 -->
+                    <StackPanel Grid.Column="0" Background="Transparent">
+                        <Button x:Name="page1to" hc:Poptip.Content="联机大厅" hc:Poptip.Placement="Left" Height="60" Width="60" Click="Page1Button_Click" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/lj.png" Height="40" Width="40" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="page2to" hc:Poptip.Content="创建房间" hc:Poptip.Placement="Left" Click="Page2Button_Click" Height="60" Width="60" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/cjf.png" Height="40" Width="40" />
+
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="page3to" hc:Poptip.Content="快速联机" hc:Poptip.Placement="Left" Click="Page3Button_Click" Height="60" Width="60" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/kslj.png" Height="40" Width="40" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="page4to" hc:Poptip.Content="日志框" hc:Poptip.Placement="Left" Click="Page5Button_Click" Height="60" Width="60" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/rzfw.png" Height="40" Width="40" />
+                            </StackPanel>
+                        </Button>
+
+                        <!--调试按钮-->
+                        <!--<Button x:Name="page5to" hc:Poptip.Content="调试按钮" hc:Poptip.Placement="Left" Click="Page4Button_Click" Height="60" Width="60" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/kslj.png" Height="40" Width="40" />
+                            </StackPanel>
+                        </Button>-->
+                        <Button Height="40" VerticalAlignment="Stretch" Margin="0,230,0,0" Click="Buttonset_Click" Background="#d3d3d3">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/img/sz.png" Height="20" Width="20" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <!-- 主内容区域 -->
+                    <ContentControl Grid.Column="1" x:Name="mainContent" Grid.ColumnSpan="3" Background="#f2f2f2">
+
+                        <Frame x:Name="Framez" Content="" NavigationUIVisibility="Hidden" Background="#f5f6f7" />
+                    </ContentControl>
+
+
+
+                </Grid>
+            </Border>
+
+
+
+
+        </Grid>
+    </Border>
+
+</Window>

@@ -1,0 +1,17 @@
+﻿<Application x:Class="N2Nmc.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:N2Nmc"
+             StartupUri="View/MainView.xaml">
+    <Application.Resources>
+        <!--<BitmapImage x:Key="ApplicationIcon" UriSource="img/logo13.ico"/>-->
+
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
